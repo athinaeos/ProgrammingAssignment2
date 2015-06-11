@@ -1,6 +1,12 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
+<<<<<<< HEAD
+## I created a clone Git directory on my desktop on 10 June 2015
+=======
+## I added this edit comment to the file in the github fork on Thursday 11 June 2015
+>>>>>>> origin/master
+
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
