@@ -7,6 +7,8 @@
 
 ## Comment 2: I added this edit comment to the file in the github fork on Thursday 11 June 2015
 
+## Comment 3: Yet another comment on the 11 June 2015
+
 
 ## I added this edit comment to the file in the github fork on Thursday 11 June 2015
 
