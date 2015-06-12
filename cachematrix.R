@@ -1,5 +1,7 @@
+## Part I: Cache Matrix
 ## this function creates a list of four functions
-## its input is a matrix x
+## its input is a matrix x; we assume that x is invertible
+## as an example: xx <- makeCacheMatrix(x) is a list with four elements, the four functions defined below
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -26,9 +28,10 @@ makeCacheMatrix <- function(x = matrix()) {
              setinverse = setinverse,
              getinverse = getinverse)
 }
-
+## Part II: Retrieve the inverse from the cache if it exists, or compute it and store it in the cache
 ## this function accepts as input the list of four functions created by the "makeCacheMatrix" function 
 ## and returns a matrix that is the inverse of 'x'
+## as example: cacheSolve(xx), returns the invesrse of matrix x, where xx is the list of the four functions created in Part I.
 cacheSolve <- function(x, ...) {
         
         # t is fetched by the "getinverse" function
