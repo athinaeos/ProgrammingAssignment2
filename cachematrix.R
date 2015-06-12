@@ -1,47 +1,47 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-
-
-## Comment 1: I created a clone Git directory on my desktop on 10 June 2015
-
-## Comment 2: I added this edit comment to the file in the github fork on Thursday 11 June 2015
-
-## Comment 3: Yet another comment on the 11 June 2015
-
-
-## I added this edit comment to the file in the github fork on Thursday 11 June 2015
-
-
-## Write a short comment describing this function
+## this function creates a list of four functions
+## its input is a matrix x
 
 makeCacheMatrix <- function(x = matrix()) {
 
+        # t is the inverse matrix, and is set to NULL
         t <-NULL
+        
+        # this function sets matrix x, to a new matrix, y, and resets the inverse, t, to NUL
         set <- function(y) {
                 x <<- y
                 t <<- NULL
                 }
+        
+        # this function returns matrix x
         get <- function() x
+        
+        # this function sets the inverse, t, to inverse
         setinverse <- function(inverse) t <<- inverse
+        
+        # this function returns the inverse, t
         getinverse <- function() t
+        
+        # this statement creates a list of all four functions and names them accordingly
         list(set = set, get = get, 
              setinverse = setinverse,
              getinverse = getinverse)
 }
 
-## Write a short comment describing this function
-
+## this function accepts as input the list of four functions created by the "makeCacheMatrix" function 
+## and returns a matrix that is the inverse of 'x'
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
         
+        # t is fetched by the "getinverse" function
         t <- x$getinverse()
+        # if t is not NULL, print a message and return matrix t and end
         if (!is.null(t)) {
                 message("getting cached data")
                 return (t)
         }
+        # if t is NULL, fetch matrix x, and compute its inverse 
         data <- x$get()
         t <- solve(data, ...)
+        # set t to inverse and print it 
         x$setinverse(t)
         t
 }
